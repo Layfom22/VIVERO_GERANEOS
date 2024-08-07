@@ -1,4 +1,4 @@
-import fetchData from './fetchData.js';
+import fetchData from '../../BackEnd/fetchData.js';
 
 async function loadTableData() {
   const tableBody = document.querySelector('#data-table tbody');
@@ -7,11 +7,11 @@ async function loadTableData() {
   data.forEach(row => {
     const tableRow = document.createElement('tr');
     tableRow.innerHTML = `
-      <td>${row.cantidad}</td>
-      <td>${row.destino}</td>
-      <td>${row.altura}</td>
-      <td>${row.ancho}</td>
-      <td>${row.largo}</td>
+      <td contenteditable="true">${row.cantidad}</td>
+      <td contenteditable="true">${row.destino}</td>
+      <td contenteditable="true">${row.altura}</td>
+      <td contenteditable="true">${row.ancho}</td>
+      <td contenteditable="true">${row.largo}</td>
     `;
     tableBody.appendChild(tableRow);
   });
