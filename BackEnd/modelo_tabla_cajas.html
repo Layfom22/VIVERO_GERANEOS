@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tabla de Datos de Supabase</title>
+  <title>Datos de TBL_CAJAS</title>
   <style>
     table {
       width: 100%;
       border-collapse: collapse;
     }
-
     th, td {
       padding: 8px;
       text-align: left;
       border: 1px solid #ddd;
     }
-
     th {
       background-color: #f4f4f4;
     }
@@ -31,7 +29,6 @@
         <th>ALTO</th>
         <th>ANCHO</th>
         <th>LARGO</th>
-        <!-- Añade más columnas según tu tabla -->
       </tr>
     </thead>
     <tbody>
@@ -41,6 +38,7 @@
 
   <script type="module">
     import fetchData from './fetchData.js';
+
     async function loadTableData() {
       const tableBody = document.querySelector('#data-table tbody');
       const data = await fetchData();
@@ -53,7 +51,6 @@
           <td>${row.altura}</td>
           <td>${row.ancho}</td>
           <td>${row.largo}</td>
-          <!-- Añade más celdas según tu tabla -->
         `;
         tableBody.appendChild(tableRow);
       });

@@ -1,15 +1,11 @@
 // fetchData.js
-import { Console } from "console";
-import { supabase } from "./supabaseClient";
+import { supabase } from "./supabaseClient.js";
 
 async function fetchData() {
-  let { data: TBL_CAJAS, error } = await supabase.from("TBL_CAJAS").select("*");
+  let { data, error } = await supabase.from("TBL_CAJAS").select("*");
 
   if (error) {
-    console.error("Código de error:", error.code);
-    console.error("Mensaje de error:", error.message);
-    console.error("Detalles:", error.details);
-    console.error("Sugerencias:", error.hint);
+    console.error('Error:', error.message);
     return [];
   }
 
