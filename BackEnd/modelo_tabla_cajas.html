@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabla de Datos de Supabase</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+  <h1>Datos de TBL_CAJAS</h1>
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th>CANT.</th>
+        <th>DIRECCIÓN</th>
+        <th>ALTO</th>
+        <th>ANCHO</th>
+        <th>LARGO</th>
+        <!-- Añade más columnas según tu tabla -->
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Las filas de datos se agregarán aquí -->
+    </tbody>
+  </table>
+
+  <script type="module">
+    import fetchData from './fetchData.js';
+
+    async function loadTableData() {
+      const tableBody = document.querySelector('#data-table tbody');
+      const data = await fetchData();
+
+      data.forEach(row => {
+        const tableRow = document.createElement('tr');
+        tableRow.innerHTML = `
+          <td>${row.cantidad}</td>
+          <td>${row.destino}</td>
+          <td>${row.altura}</td>
+          <td>${row.ancho}</td>
+          <td>${row.largo}</td>
+          <!-- Añade más celdas según tu tabla -->
+        `;
+        tableBody.appendChild(tableRow);
+      });
+    }
+
+    loadTableData();
+  </script>
+</body>
+</html>
