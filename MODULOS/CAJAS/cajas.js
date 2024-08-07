@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             <td contenteditable="true" oninput="validateNumberInput(this)"></td>
             <td contenteditable="true" oninput="validateNumberInput(this)"></td>
             <td contenteditable="true" oninput="validateNumberInput(this)"></td>
-            <td contenteditable="true">${formattedDate}</td>
+            
             <td><img src="/assets.img/icons8-eliminar-16 (1).png" class="delete-icon" alt="Eliminar" onclick="deleteRow(this)"></td>
         `;
         tableBody.appendChild(newRow);
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             <td contenteditable="false">BULTO</td>
             <td contenteditable="false">BULTO</td>
             <td contenteditable="false">BULTO</td>
-            <td contenteditable="true">${formattedDate}</td>
+           
             <td><img src="/assets.img/icons8-eliminar-16 (1).png" class="delete-icon" alt="Eliminar" onclick="deleteRow(this)"></td>
         `;
         tableBody.appendChild(newRow);
