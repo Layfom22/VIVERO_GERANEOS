@@ -8,10 +8,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const addBultoButton = document.getElementById('addBulto');
     const backButton = document.getElementById('backButton');
 
+    //Boton para retroceder
     backButton.addEventListener('click', () => {
         window.history.back();
     });
 
+    //Funcion para agregar una nueva fila
     addRowButton.addEventListener('click', () => {
         const tableBody = document.querySelector('table tbody');
         const newRow = document.createElement('tr');
@@ -30,6 +32,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.querySelector('.date-reg-header').classList.remove('hidden');
     });
 
+    //Funcion para agregar un Bulto
     addBultoButton.addEventListener('click', () => {
         const tableBody = document.querySelector('table tbody');
         const newRow = document.createElement('tr');
@@ -48,11 +51,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.querySelector('.date-reg-header').classList.remove('hidden');
     });
 
+    //Boton de aplicacion
     const aplicacionBtn = document.getElementById('aplicacionBtn');
     aplicacionBtn.addEventListener('click', () => {
         alert('BOTÓN APLICACIÓN PRESIONADO');
     });
 
+    //
     document.addEventListener('focusout', (e) => {
         const cell = e.target;
         if (cell.cellIndex >= 2 && cell.cellIndex <= 4 && cell.isContentEditable) {
