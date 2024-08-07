@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajas</title>
+    <link rel="stylesheet" href="cajas.css">
+</head>
+<body>
+    <div class="header">
+        <div class="date-field">
+            <label for="date">FECHA:</label>
+            <input type="date" id="date">
+        </div>
+        <div class="buttons">
+            <button id="aplicacionBtn">APLICACIÓN</button>
+            <button id="matchBtn">MATCH</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section left-section">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>CANT.</th>
+                            <th>DIRECCIÓN</th>
+                            <th>ALTO</th>
+                            <th>ANCHO</th>
+                            <th>LARGO</th>
+                            <th class="date-reg-header hidden">FECHA DE REGISTRO</th>
+
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div id="control-buttons">
+                <button id="addRow">+</button>
+                <button id="addBulto">AGREGAR BULTO</button>
+                
+            </div>
+        </div>
+        <div class="section right-section">
+            
+        </div>
+    </div>
+<script src="cajas.js"></script>
+
+</body>
+</html>

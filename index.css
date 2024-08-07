@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #d3d3d3;
+}
+.container {
+    text-align: center;
+}
+.logo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.button {
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
