@@ -3,44 +3,83 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    background-color: #daf1d5;
+    
 }
-.date-field, .buttons {
+.title-container {
     display: flex;
     align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header .title {
+    font-size: 30px; 
+    margin-left: 50px; 
+}
+.back-button {
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    border: 2px solid rgb(102, 101, 101);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img {
+    width: 80px;
+    
+}
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+   
+}
+.controls .date-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .buttons {
+    display: flex;
     gap: 10px;
+ 
 }
 .container {
     display: flex;
-    height: calc(100vh - 60px); 
+    height: calc(100vh - 120px);
     padding: 10px;
-    gap: 50px; 
+    gap: 20px;
 }
 .section {
     border: 1px solid black;
     flex: 1;
     padding: 10px;
     overflow: auto;
-    position: relative;   
+    max-height: calc(90vh - 20px);
+    position: relative;
 }
 table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 12px; 
+    font-size: 12px;
 }
 table, th, td {
     border: 1px solid black;
 }
 th, td {
-    padding: 6px; 
+    padding: 6px;
     text-align: center;
 }
 .table-container {
@@ -48,23 +87,21 @@ th, td {
     max-height: 100%;
 }
 button {
-    font-size: 14px; 
-    padding: 5px; 
+    font-size: 14px;
+    padding: 5px;
     cursor: pointer;
+    
+   
 }
 .delete-icon {
     cursor: pointer;
-    position: absolute;
-    right: -30px;
-    width: 24px;
-    height: 24px;
-}
-#control-buttons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
+    width: 15px;
+    height: 15px;
+   
 }
 .hidden {
     display: none;
+}
+#control-buttons {
+    margin-top: 20px; 
 }
