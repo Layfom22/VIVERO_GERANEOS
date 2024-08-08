@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         <td contenteditable="true">${row.altura}</td>
         <td contenteditable="true">${row.ancho}</td>
         <td contenteditable="true">${row.largo}</td>
+        <td><img src="/assets.img/icons8-eliminar-16 (1).png" class="delete-icon" alt="Eliminar" onclick="deleteRow(this)"></td>
       `;
     tableBody.appendChild(tableRow);
   });

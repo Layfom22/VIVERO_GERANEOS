@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const backButton = document.getElementById('backButton');
 
     backButton.addEventListener('click', () => {
-        window.history.back();
+        window.location.href ='/index.html';
     });
 
     addRowButton.addEventListener('click', () => {
@@ -17,12 +17,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const newRow = document.createElement('tr');
 
         newRow.innerHTML = `
-            <td contenteditable="true" oninput="validateNumberInput(this)"></td>
+            <td contenteditable="true" oninput="validateNumberInput(this)">1</td>
             <td contenteditable="true"></td>
             <td contenteditable="true" oninput="validateNumberInput(this)"></td>
             <td contenteditable="true" oninput="validateNumberInput(this)"></td>
             <td contenteditable="true" oninput="validateNumberInput(this)"></td>
-            
             <td><img src="/assets.img/icons8-eliminar-16 (1).png" class="delete-icon" alt="Eliminar" onclick="deleteRow(this)"></td>
         `;
         tableBody.appendChild(newRow);
@@ -35,12 +34,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const newRow = document.createElement('tr');
 
         newRow.innerHTML = `
-            <td contenteditable="true" oninput="validateNumberInput(this)"></td>
+            <td contenteditable="true" oninput="validateNumberInput(this)">1</td>
             <td contenteditable="true"></td>
             <td contenteditable="false">BULTO</td>
             <td contenteditable="false">BULTO</td>
-            <td contenteditable="false">BULTO</td>
-           
+            <td contenteditable="false">BULTO</td> 
             <td><img src="/assets.img/icons8-eliminar-16 (1).png" class="delete-icon" alt="Eliminar" onclick="deleteRow(this)"></td>
         `;
         tableBody.appendChild(newRow);
@@ -68,3 +66,5 @@ function deleteRow(element) {
 function validateNumberInput(element) {
     element.textContent = element.textContent.replace(/[^0-9]/g, '');
 }
+
+    

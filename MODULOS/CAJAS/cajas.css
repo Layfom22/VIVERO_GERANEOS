@@ -11,7 +11,8 @@ body {
     align-items: center;
     padding: 10px;
     background-color: #daf1d5;
-    
+    height: 90px;
+    box-sizing: border-box;
 }
 .title-container {
     display: flex;
@@ -23,21 +24,33 @@ body {
     font-size: 30px; 
     margin-left: 50px; 
 }
+/* boton retroceder */
 .back-button {
-    font-size: 18px;
-    padding: 10px;
-    cursor: pointer;
-    border: 2px solid rgb(102, 101, 101);
+    font-size: 25px; 
+    padding: 15px;   
+    width: 30px;     
+    height: 30px;    
+    border: 2px solid black;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:  #daf1d5;
+    cursor: pointer;
 }
+
+.logo {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    height: 100%;            
+}
+ 
 .logo img {
-    width: 80px;
-    
+    max-height: 70px; 
+    width: auto; 
+    display: block; 
+    margin: 30px 0; 
 }
 .controls {
     display: flex;
@@ -90,18 +103,58 @@ button {
     font-size: 14px;
     padding: 5px;
     cursor: pointer;
-    
-   
 }
 .delete-icon {
     cursor: pointer;
     width: 15px;
     height: 15px;
-   
 }
 .hidden {
     display: none;
 }
 #control-buttons {
     margin-top: 20px; 
+}
+/* boton guardar  */
+#saveBtn {
+    background-color: rgb(46, 175, 34);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* cajas clientes */
+.contact-list {
+    border: 1px solid #000;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px;  
+    font-size: 13px; 
+    overflow-y: auto;
+    height: auto;
+    max-height: calc(100vh - 120px);
+}
+
+.contact-item {
+    padding: 8px; 
+    margin: 0; 
+}
+
+.contact-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px; 
+    line-height: 1; 
+}
+
+.contact-header span {
+    padding: 0 2px; 
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-grow: 0;
+    flex-shrink: 1; 
 }
